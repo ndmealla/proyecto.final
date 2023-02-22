@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi Curriculum Vitae</title>
+	<style>
+		body {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular';
+			margin: 0 auto;
+            margin: 40px 45px 40px 50px;
+			background-color: white;
+            
+		}
+		header {
+			background-color: #37BBED;
+			color: white;
+			padding: 20px;
+			text-align: left;
+            border-radius: 10px;
+		}
+		h1 {
+			margin-top: 0;
+			color: #FFFFFF;
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+		main {
+			padding: 20px;
+			text-align: left;
+			background-color: #FFFFFF;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		h2 {
+			color: #00BFFF;
+			font-size: 24px;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		h3 {
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		ul {
+            
+			margin: 0;
+			padding: 0;
+		}
+		li {
+            list-style-type: circle;
+            margin-bottom: 10px;
+		}
+		footer {
+			background-color: #37BBED;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			clear: both;
+            border-radius: 10px;
+		}
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		.fadeInUp {
+			animation-name: fadeInUp;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		button {
+			background-color: #37BBED;
+			color: #FFFFFF;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #1E90FF;
+		}
+        img {
+            float: right;
+            margin-left: auto;
+            border-radius: 15px;
+            width: 180px;
+			height: auto;
+		}
+	</style>
+	<script>
+		function toggleExperience(id) {
+			var element = document.getElementById(id);
+			if (element.style.display === "none") {
+				element.style.display = "block";
+				element.classList.add("fadeInUp");
+			} else {
+				element.style.display = "none";
+				element.classList.remove("fadeInUp");
+			}
+		}
+	</script>
+    <img src="https://randomuser.me/api/portraits/men/29.jpg">
+
+</head>
+<body>
+	<header>
+		<h1>Información Personal</h1>
+		<ul>
+			<p>Nombre: Néstor Damián Mealla</p>
+            <p>Dirección: Av. Pellegrini 1228</p>
+            <p>Teléfono: (341) 456-9701</p>
+            <p>Correo electrónico: ndmealla@gmail.com</p>
+            <p>Sitio web: www.ndmealla.com</p>
+		</ul>
+	</header>
+	<main>
+		<h2>Experiencia Laboral</h2>
+		<button onclick="toggleExperience('experience1')">Desarrollador de software</button>
+		<div id="experience1" style="
+			display: none;">
+			<h3>Desarrollador de software - Ingenia S.R.L.</h3>
+			<p>Fecha de inicio: Enero de 2019</p>
+			<p>Fecha de finalización: Presente</p>
+			<ul>
+				<li>Creación de aplicaciones web mediante la implementación de tecnologías como HTML, CSS, JavaScript, PHP y MySQL.</li>
+				<li>Colaboración en equipo con otros desarrolladores y diseñadores para alcanzar los objetivos del proyecto.</li>
+				<li>Establecimiento de comunicación con los clientes para comprender sus requerimientos y ofrecer soluciones personalizadas.</li>
+			</ul>
+		</div>
+		<button onclick="toggleExperience('experience2')">Analista de sistemas</button>
+		<div id="experience2" style="display: none;">
+			<h3>Analista de sistemas - Empresa Argentina</h3>
+			<p>Fecha de inicio: Junio de 2016</p>
+			<p>Fecha de finalización: Diciembre de 2018</p>
+			<ul>
+				<li>Evaluación y diseño de sistemas con el fin de optimizar los procesos internos de la empresa.</li>
+				<li>Desarrollo de soluciones tecnológicas innovadoras mediante la programación en Java y C#.</li>
+				<li>Coordinación de proyectos con equipos multidisciplinarios para lograr la implementación exitosa de las soluciones tecnológicas.</li>
+			</ul>
+		</div>
+		<h2>Habilidades</h2>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JavaScript</li>
+			<li>PHP</li>
+			<li>Java</li>
+            <li>Shell scripting</li>
+			<li>Comunicación efectiva</li>
+			<li>Trabajo en equipo</li>			
+		</ul>
+	</main>
+	<footer>
+		<p>Copyright © 2023 Néstor Mealla.
+	</footer>
+</body>
+</html>
